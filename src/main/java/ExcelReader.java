@@ -12,11 +12,12 @@ import java.util.Iterator;
 public class ExcelReader {
     public static final String SAMPLE_XLS_FILE_PATH = "./sample-xls-file.xls";
     public static final String SAMPLE_XLSX_FILE_PATH = "./sample-xlsx-file.xlsx";
+    public static final String SAMPLE_XLSB_FILE_PATH = "./sample-xls-file.xlsb";
 
     public static void main(String[] args) throws IOException, InvalidFormatException {
 
         // Creating a Workbook from an Excel file (.xls or .xlsx)
-        Workbook workbook = WorkbookFactory.create(new File(SAMPLE_XLSX_FILE_PATH));
+        Workbook workbook = WorkbookFactory.create(new File(SAMPLE_XLSB_FILE_PATH));
 
         // Retrieving the number of sheets in the Workbook
         System.out.println("Workbook has " + workbook.getNumberOfSheets() + " Sheets : ");
